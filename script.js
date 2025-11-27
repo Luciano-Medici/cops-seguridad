@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
       nextBtn: document.querySelector('.hero__next'),
       currentSlide: 0,
       interval: null,
-      intervalTime: 5000,
+      intervalTime: 3000,
 
       init: function() {
           this.startAutoPlay();
