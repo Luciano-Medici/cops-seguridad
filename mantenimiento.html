@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COPS - Sitio en Mantenimiento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        /* RESET Y VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colores Corporativos */
+            --color-prussian: #033653;
+            --color-black: #000000;
+            --color-aqua: #00FFFF;
+            --color-white: #ffffff;
+
+            /* Tipografía Corporativa */
+            --font-primary: 'Kanit', sans-serif;
+            
+            /* Pesos Tipográficos */
+            --font-weight-extra-light: 200;
+            --font-weight-light: 300;
+            --font-weight-medium: 500;
+            --font-weight-semi-bold: 600;
+            --font-weight-bold: 700;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, var(--color-prussian) 0%, #022a44 100%);
+            color: var(--color-white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .maintenance-container {
+            max-width: 600px;
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* LOGO */
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        /* CONTENIDO */
+        .maintenance-title {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 20px;
+            color: var(--color-white);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .maintenance-subtitle {
+            font-size: 1.25rem;
+            font-weight: var(--font-weight-light);
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* ICONO DE MANTENIMIENTO */
+        .maintenance-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 40px;
+            background: var(--color-aqua);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        .maintenance-icon::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border: 2px solid var(--color-aqua);
+            border-radius: 50%;
+            animation: ripple 2s infinite;
+        }
+
+        .maintenance-icon svg {
+            width: 50px;
+            height: 50px;
+            color: var(--color-prussian);
+        }
+
+        /* SECCIÓN DE CONTACTO */
+        .contact-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 4px solid var(--color-aqua);
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            font-weight: var(--font-weight-semi-bold);
+            margin-bottom: 20px;
+            color: var(--color-white);
+        }
+
+        .contact-message {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* BOTONES DE CONTACTO */
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: var(--font-weight-semi-bold);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--color-white);
+        }
+
+        .btn-email {
+            background: var(--color-aqua);
+            color: var(--color-prussian);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+
+        .btn-email:hover {
+            background: #00e6e6;
+        }
+
+        .contact-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* INFORMACIÓN ADICIONAL */
+        .info-section {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-title {
+            font-size: 1.1rem;
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 15px;
+            color: var(--color-white);
+        }
+
+        .service-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-aqua);
+            font-weight: bold;
+        }
+
+        /* ANIMACIONES */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(0, 255, 255, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(0, 255, 255, 0);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (min-width: 768px) {
+            .maintenance-title {
+                font-size: 3rem;
+            }
+
+            .maintenance-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .contact-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .contact-btn {
+                min-width: 200px;
+            }
+
+            .service-list {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <!-- Logo -->
+        <div class="logo">
+            <!-- Reemplaza con tu logo real -->
+            <div style="color: white; font-size: 2rem; font-weight: bold;">COPS</div>
+            <!-- <img src="/assets/img/logo-header.png" alt="COPS Seguridad" class="logo-img"> -->
+        </div>
+
+        <!-- Icono de mantenimiento -->
+        <div class="maintenance-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H9C7.9 1 7 1.9 7 3V7H5C3.9 7 3 7.9 3 9V14C3 15.1 3.9 16 5 16H7V21C7 22.1 7.9 23 9 23H15C16.1 23 17 22.1 17 21V16H19C20.1 16 21 15.1 21 14V9ZM15 3.5L18.5 7H15V3.5ZM9 3H13V7H9V3ZM5 9H19V14H15V21H9V14H5V9Z"/>
+            </svg>
+        </div>
+
+        <!-- Título y subtítulo -->
+        <h1 class="maintenance-title">Sitio en Mantenimiento</h1>
+        <p class="maintenance-subtitle">
+            Estamos trabajando para mejorar tu experiencia. <br>
+            Pronto estaremos de vuelta con un sitio renovado.
+        </p>
+
+        <!-- Sección de contacto -->
+        <div class="contact-section">
+            <h2 class="contact-title">¿Necesitas nuestros servicios?</h2>
+            <p class="contact-message">
+                Mientras terminamos nuestro sitio web, puedes contactarnos directamente. 
+                Estamos disponibles para atender tus necesidades de seguridad.
+            </p>
+
+            <div class="contact-buttons">
+                <a href="https://wa.me/5491112345678?text=Hola%20COPS%2C%20me%20interesan%20sus%20servicios%20de%20seguridad" 
+                   class="contact-btn btn-whatsapp" 
+                   target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.46-.72-1.69-.8c-.23-.08-.37-.12-.56.12c-.16.25-.64.8-.78.97c-.14.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.12-.12.27-.32.37-.48c.1-.16.17-.28.22-.44c.06-.17.03-.31-.02-.43c-.05-.12-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01z"/>
+                    </svg>
+                    WhatsApp: +54 9 11 1234-5678
+                </a>
+                
+                <a href="mailto:info@copsseguridad.com" 
+                   class="contact-btn btn-email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    info@copsseguridad.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="info-section">
+            <h3 class="info-title">Nuestros servicios de seguridad</h3>
+            <ul class="service-list">
+                <li>Seguridad para constructoras e industria</li>
+                <li>Protección para empresas y bancos</li>
+                <li>Vigilancia en centros comerciales</li>
+                <li>Seguridad en condominios y countries</li>
+                <li>Protección para instituciones educativas</li>
+                <li>Seguridad en eventos masivos</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 COPS - Servicio de Seguridad. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

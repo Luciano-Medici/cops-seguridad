@@ -129,3 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
       heroCarousel.init();
   }
 });
+
+// Año actual en el footer
+document.addEventListener('DOMContentLoaded', () => {
+    const currentYear = document.getElementById('current-year');
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
+});
