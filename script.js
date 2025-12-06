@@ -29,106 +29,54 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// JavaScript para el carrusel del hero
 document.addEventListener('DOMContentLoaded', function() {
-  const heroCarousel = {
-      slides: document.querySelectorAll('.hero__slide'),
-      indicators: document.querySelectorAll('.hero__indicator'),
-      prevBtn: document.querySelector('.hero__prev'),
-      nextBtn: document.querySelector('.hero__next'),
-      currentSlide: 0,
-      interval: null,
-      intervalTime: 3000,
+    const heroCarousel = {
+        slides: document.querySelectorAll('.hero__slide'),
+        indicators: document.querySelectorAll('.hero__indicator'),
+        currentSlide: 0,
+        interval: null,
+        intervalTime: 3000,
 
-      init: function() {
-          this.startAutoPlay();
-          this.setupEventListeners();
-      },
+        init: function() {
+            this.startAutoPlay();
+            this.setupIndicatorEvents();
+        },
 
-      startAutoPlay: function() {
-          this.interval = setInterval(() => {
-              this.nextSlide();
-          }, this.intervalTime);
-      },
+        startAutoPlay: function() {
+            this.interval = setInterval(() => {
+                this.nextSlide();
+            }, this.intervalTime);
+        },
 
-      setupEventListeners: function() {
-          // Botones anterior/siguiente
-          if (this.prevBtn) {
-              this.prevBtn.addEventListener('click', () => {
-                  this.pauseAutoPlay();
-                  this.prevSlide();
-                  this.restartAutoPlay();
-              });
-          }
+        setupIndicatorEvents: function() {
+            this.indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    this.goToSlide(index);
+                });
+            });
+        },
 
-          if (this.nextBtn) {
-              this.nextBtn.addEventListener('click', () => {
-                  this.pauseAutoPlay();
-                  this.nextSlide();
-                  this.restartAutoPlay();
-              });
-          }
+        goToSlide: function(slideIndex) {
+            this.slides.forEach(slide => slide.classList.remove('active'));
+            this.indicators.forEach(ind => ind.classList.remove('active'));
 
-          // Indicadores
-          this.indicators.forEach((indicator, index) => {
-              indicator.addEventListener('click', () => {
-                  this.pauseAutoPlay();
-                  this.goToSlide(index);
-                  this.restartAutoPlay();
-              });
-          });
+            this.slides[slideIndex].classList.add('active');
+            this.indicators[slideIndex].classList.add('active');
 
-          // Pausar autoplay al interactuar con el hero
-          const hero = document.querySelector('.hero');
-          if (hero) {
-              hero.addEventListener('mouseenter', () => this.pauseAutoPlay());
-              hero.addEventListener('mouseleave', () => this.restartAutoPlay());
-              hero.addEventListener('touchstart', () => this.pauseAutoPlay());
-          }
-      },
+            this.currentSlide = slideIndex;
+        },
 
-      goToSlide: function(slideIndex) {
-          // Remover clase active de todos los slides e indicadores
-          this.slides.forEach(slide => slide.classList.remove('active'));
-          this.indicators.forEach(indicator => indicator.classList.remove('active'));
+        nextSlide: function() {
+            const next = (this.currentSlide + 1) % this.slides.length;
+            this.goToSlide(next);
+        }
+    };
 
-          // Agregar clase active al slide e indicador actual
-          this.slides[slideIndex].classList.add('active');
-          this.indicators[slideIndex].classList.add('active');
-          
-          this.currentSlide = slideIndex;
-      },
-
-      nextSlide: function() {
-          const nextSlide = (this.currentSlide + 1) % this.slides.length;
-          this.goToSlide(nextSlide);
-      },
-
-      prevSlide: function() {
-          const prevSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
-          this.goToSlide(prevSlide);
-      },
-
-      pauseAutoPlay: function() {
-          if (this.interval) {
-              clearInterval(this.interval);
-              this.interval = null;
-          }
-      },
-
-      restartAutoPlay: function() {
-          this.pauseAutoPlay();
-          this.interval = setInterval(() => {
-              this.nextSlide();
-          }, this.intervalTime);
-      }
-  };
-
-  // Inicializar el carrusel
-  if (document.querySelector('.hero__carousel')) {
-      heroCarousel.init();
-  }
+    if (document.querySelector('.hero__carousel')) {
+        heroCarousel.init();
+    }
 });
+
 
 // Año actual en el footer
 document.addEventListener('DOMContentLoaded', () => {

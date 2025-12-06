@@ -28,7 +28,7 @@
             <nav class="header__nav" aria-label="Principal">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a href="#inicio" class="header__nav-link">INICIO</a>
+                        <a href="#hero" class="header__nav-link">INICIO</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="#sobre" class="header__nav-link">SOBRE NOSOTROS</a>
@@ -39,7 +39,8 @@
 
                     <!-- Contacto como botón en la misma fila -->
                     <li class="header__nav-item">
-                        <a href="#contacto" class="header__cta-btn" aria-label="Contacto">
+                        <a href="https://wa.me/5493518582937?text=Hola%20COPS%2C%20me%20interesan%20sus%20servicios%20de%20seguridad"
+                            class="header__cta-btn" aria-label="Contacto">
                             <span>CONTACTO</span>
                             <svg class="header__cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                                 <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -68,13 +69,14 @@
         <!-- Menú móvil (oculto por defecto) -->
         <div id="mobile-menu" class="header__mobile-menu">
             <div class="header__mobile-container">
-                <a href="#inicio" class="header__mobile-link">INICIO</a>
+                <a href="#hero" class="header__mobile-link">INICIO</a>
                 <a href="#sobre" class="header__mobile-link">SOBRE NOSOTROS</a>
                 <a href="#servicios" class="header__mobile-link">NUESTROS SERVICIOS</a>
 
                 <!-- Contacto como botón en móvil -->
                 <div class="header__mobile-cta">
-                    <a href="#contacto" class="header__mobile-cta-btn">
+                    <a href="https://wa.me/5493518582937?text=Hola%20COPS%2C%20me%20interesan%20sus%20servicios%20de%20seguridad"
+                        class="header__mobile-cta-btn">
                         <span>CONTACTO</span>
                         <svg class="header__mobile-cta-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                             <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -109,38 +111,24 @@
                 </picture>
             </div>
         </div>
-
-        <!-- Overlay (Prussian #033653 50%) -->
+    
+        <!-- Overlay -->
         <div class="hero__overlay"></div>
-
-        <!-- Controles del carrusel -->
+    
+        <!-- Indicadores del carrusel -->
         <div class="hero__controls">
-            <button class="hero__control-btn hero__prev" aria-label="Imagen anterior">
-                <svg class="hero__control-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </button>
-
             <div class="hero__indicators">
                 <button class="hero__indicator active" data-slide="1" aria-label="Ir a imagen 1"></button>
                 <button class="hero__indicator" data-slide="2" aria-label="Ir a imagen 2"></button>
                 <button class="hero__indicator" data-slide="3" aria-label="Ir a imagen 3"></button>
             </div>
-
-            <button class="hero__control-btn hero__next" aria-label="Siguiente imagen">
-                <svg class="hero__control-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </button>
         </div>
-
-        <!-- Contenido encima de la imagen y overlay -->
+    
+        <!-- Contenido -->
         <div class="hero__content">
             <div class="hero__text">
-                <h1 class="hero__title">SOMOS COPS</h1>
-                <p class="hero__subtitle">Cuerpo operativo de seguridad privada.</p>
+                <h1 class="hero__title">TU TRANQUILIDAD<br>NUESTRA PRIORIDAD</h1>
+                <p class="hero__subtitle">Seguridad privada de alto nivel.</p>
                 <div class="hero__cta">
                     <a href="#contacto" class="hero__btn" aria-label="Contáctanos">
                         <span>Contáctanos</span>
@@ -155,6 +143,7 @@
             </div>
         </div>
     </section>
+    
     <section class="about" id="sobre">
         <div class="about__container">
             <div class="about__grid">
@@ -285,9 +274,9 @@
             </div>
         </div>
     </section>
-    <!-- Sección Servicios -->
     <section class="services" id="servicios">
         <div class="services__container">
+
             <div class="services__header">
                 <h2 class="services__title">
                     Sectores que protegemos
@@ -296,30 +285,33 @@
             </div>
 
             <div class="services__content">
-                <!-- Constructoras e Industria -->
+
+                <!-- ============ 1. Constructoras e Industria ============ -->
                 <div class="service-category">
-                    <!-- Banner con foto para la categoría -->
+
                     <div class="service-category__banner"
-                        style="background-image: url('./assets/img/servicios-constructora.jpg');">
+                        style="background-image: url('./assets/img/servicios-constructora.png');">
                         <div class="service-category__banner-overlay"></div>
+
                         <div class="service-category__header">
                             <h3 class="service-category__title">Constructoras e Industria</h3>
                             <div class="service-category__description">
                                 <p class="service-category__text">
-                                    Nuestra estrategia combina guardia física activa junto a monitoreo remoto para
-                                    prevenir eficazmente robos, vandalismo e intrusiones no deseadas. Cada metro
-                                    cuadrado está vigilado con la más alta tecnología y personal capacitado.
+                                    Nuestro sistema integra vigilancia presencial con supervisión tecnológica avanzada,
+                                    creando una barrera efectiva contra hurtos, daños materiales y accesos no
+                                    autorizados. Cada espacio recibe cobertura completa mediante equipamiento de última
+                                    generación y operadores altamente capacitados.
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="service-category__grid service-category__grid--compact">
+                    <div class="service-category__grid ">
+
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
                                             clip-rule="evenodd" />
@@ -328,8 +320,9 @@
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Constructoras</p>
                                     <p class="service-card__sub-text">Desarrollistas</p>
-                                    <p class="service-card__description">Protección integral para obras en desarrollo y
-                                        sitios de construcción.</p>
+                                    <p class="service-card__description">
+                                        Protección integral para obras en desarrollo y sitios de construcción.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -337,8 +330,7 @@
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
                                             clip-rule="evenodd" />
@@ -347,46 +339,49 @@
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Industria</p>
                                     <p class="service-card__sub-text">Manufactura</p>
-                                    <p class="service-card__description">Seguridad perimetral y control de accesos para
-                                        plantas industriales.</p>
+                                    <p class="service-card__description">
+                                        Seguridad perimetral y control de accesos para plantas industriales.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- Empresas, Bancos y Shoppings -->
+                <!-- ============ 2. Empresas, Bancos y Shoppings ============ -->
                 <div class="service-category">
+
                     <div class="service-category__banner"
-                        style="background-image: url('./assets/img/servicios-bancos.jpg');">
+                        style="background-image: url('./assets/img/servicios-empresas.png');">
                         <div class="service-category__banner-overlay"></div>
+
                         <div class="service-category__header">
                             <h3 class="service-category__title">Empresas, Bancos y Shoppings</h3>
-                            <div class="service-category__description">
-                                <p class="service-category__text">
-                                    Nuestros sistemas de vigilancia están diseñados específicamente para espacios
-                                    comerciales, garantizando la seguridad de personal, clientes y activos durante todas
-                                    las horas de operación.
-                                </p>
-                            </div>
+                            <p class="service-category__text">
+                                Protección comercial integral: salvaguardamos a su personal, clientes y activos con
+                                sistemas adaptados a las necesidades específicas de cada establecimiento, activos las
+                                24/7.
+                            </p>
                         </div>
                     </div>
 
                     <div class="service-category__grid">
+
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path
-                                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                            d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
                                     </svg>
                                 </div>
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Empresas</p>
                                     <p class="service-card__sub-text">Oficinas</p>
-                                    <p class="service-card__description">Control de acceso y vigilancia 24/7 para
-                                        edificios corporativos.</p>
+                                    <p class="service-card__description">
+                                        Control de acceso y vigilancia 24/7 para edificios corporativos.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -394,8 +389,7 @@
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
                                         <path fill-rule="evenodd"
                                             d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
@@ -405,8 +399,9 @@
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Bancos</p>
                                     <p class="service-card__sub-text">Financiero</p>
-                                    <p class="service-card__description">Protección especializada para entidades
-                                        bancarias y cajeros automáticos.</p>
+                                    <p class="service-card__description">
+                                        Protección especializada para entidades bancarias y cajeros automáticos.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -414,8 +409,7 @@
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path
                                             d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
                                     </svg>
@@ -423,37 +417,38 @@
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Centros</p>
                                     <p class="service-card__sub-text">Comerciales</p>
-                                    <p class="service-card__description">Vigilancia perimetral y control de multitudes
-                                        en shoppings.</p>
+                                    <p class="service-card__description">
+                                        Vigilancia perimetral y control de multitudes en shoppings.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- Complejos, Countries e Instituciones -->
+                <!-- ============ 3. Complejos, Countries e Instituciones ============ -->
                 <div class="service-category">
+
                     <div class="service-category__banner"
-                        style="background-image: url('./assets/img/servicios-complejos.jpg');">
+                        style="background-image: url('./assets/img/servicios-country.png');">
                         <div class="service-category__banner-overlay"></div>
+
                         <div class="service-category__header">
                             <h3 class="service-category__title">Complejos, Countries e Instituciones</h3>
-                            <div class="service-category__description">
-                                <p class="service-category__text">
-                                    Cubrimos cada metro cuadrado, implementando barreras de seguridad y personal
-                                    especializado en cada punto de ingreso y salida al predio. Realizamos rondas
-                                    periódicas de seguridad y vigilancia, complementadas con un monitoreo constante.
-                                </p>
-                            </div>
+                            <p class="service-category__text">
+                                Cobertura total en puntos estratégicos mediante vigilancia activa, patrullajes y
+                                monitoreo en tiempo real para una seguridad ininterrumpida en todo el predio.
+                            </p>
                         </div>
                     </div>
 
                     <div class="service-category__grid">
+
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path
                                             d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
                                     </svg>
@@ -461,8 +456,9 @@
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Condominios</p>
                                     <p class="service-card__sub-text">Countries</p>
-                                    <p class="service-card__description">Seguridad residencial y control de accesos para
-                                        barrios privados.</p>
+                                    <p class="service-card__description">
+                                        Seguridad residencial y control de accesos en barrios privados.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -470,8 +466,7 @@
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd"
                                             d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
                                             clip-rule="evenodd" />
@@ -480,8 +475,9 @@
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Hospitales</p>
                                     <p class="service-card__sub-text">Clínicas</p>
-                                    <p class="service-card__description">Protección para centros de salud y control de
-                                        áreas restringidas.</p>
+                                    <p class="service-card__description">
+                                        Protección para centros de salud, áreas críticas y accesos restringidos.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -489,58 +485,55 @@
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
                                         <path
                                             d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
-                                        <path
-                                            d="M3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                                     </svg>
                                 </div>
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Instituciones</p>
-                                    <p class="service-card__sub-text">Educativas</p>
-                                    <p class="service-card__description">Seguridad escolar y vigilancia para
-                                        universidades y colegios.</p>
+                                    <p class="service-card__sub-text">Públicas y privadas</p>
+                                    <p class="service-card__description">
+                                        Seguridad integral para instalaciones educativas y gubernamentales.
+                                    </p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- Eventos Masivos -->
+                <!-- ============ 4. Eventos masivos ============ -->
                 <div class="service-category">
+
                     <div class="service-category__banner"
-                        style="background-image: url('./assets/img/servicios-eventos.jpg');">
+                        style="background-image: url('./assets/img/servicios-concierto.png');">
                         <div class="service-category__banner-overlay"></div>
+
                         <div class="service-category__header">
                             <h3 class="service-category__title">Eventos Masivos</h3>
-                            <div class="service-category__description">
-                                <p class="service-category__text">
-                                    Nuestros equipos están capacitados específicamente para gestionar multitudes,
-                                    controlar accesos, y responder ante emergencias en entornos de alta concentración de
-                                    personas, asegurando que cada asistente pueda disfrutar con tranquilidad.
-                                </p>
-                            </div>
+                            <p class="service-category__text">
+                                Equipos especializados en gestión masiva, control de accesos y respuesta de emergencia,
+                                asegurando un ambiente protegido donde todos puedan disfrutar sin preocupaciones.
+                            </p>
                         </div>
                     </div>
 
                     <div class="service-category__grid">
+
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                            clip-rule="evenodd" />
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M10 2L2 7v11h16V7l-8-5zM6 18v-5h2v5H6zm6 0v-5h2v5h-2z" />
                                     </svg>
                                 </div>
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Eventos</p>
                                     <p class="service-card__sub-text">Ferias</p>
-                                    <p class="service-card__description">Control de accesos y seguridad perimetral para
-                                        ferias comerciales.</p>
+                                    <p class="service-card__description">
+                                        Control de accesos y seguridad perimetral para ferias comerciales.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -548,46 +541,45 @@
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
-                                        <path
-                                            d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M4 3h12l1 14H3L4 3zm3 3h6v2H7V6zm0 4h6v2H7v-2z" />
                                     </svg>
                                 </div>
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Conciertos</p>
                                     <p class="service-card__sub-text">Recitales</p>
-                                    <p class="service-card__description">Gestión de multitudes y seguridad escénica para
-                                        shows musicales.</p>
+                                    <p class="service-card__description">
+                                        Gestión de multitudes y seguridad escénica para shows musicales.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-
                         <div class="service-card">
                             <div class="service-card__content">
                                 <div class="service-card__icon">
-                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
-                                            clip-rule="evenodd" />
+                                    <svg class="service-card__svg" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M4 3h12l1 14H3L4 3zm3 3h6v2H7V6zm0 4h6v2H7v-2z" />
                                     </svg>
                                 </div>
                                 <div class="service-card__text">
                                     <p class="service-card__main-text">Eventos</p>
                                     <p class="service-card__sub-text">Deportivos</p>
-                                    <p class="service-card__description">Seguridad en estadios y control de aforo para
-                                        competencias deportivas.</p>
+                                    <p class="service-card__description">
+                                        Seguridad en estadios y control de aforo para competencias deportivas.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
+
+
     <!-- CTA WhatsApp -->
-    <!-- CTA WhatsApp - Versión Mejorada -->
     <section class="whatsapp-cta" id="contacto">
         <div class="whatsapp-cta__container">
             <h2 class="whatsapp-cta__title">¿Necesitas seguridad profesional?</h2>
@@ -596,7 +588,7 @@
                 y personalizada para tu negocio o propiedad
             </p>
 
-            <a href="https://wa.me/549XXXXXXXXXX?text=Hola%20COPS%2C%20me%20interesan%20sus%20servicios%20de%20seguridad"
+            <a href="https://wa.me/5493518582937?text=Hola%20COPS%2C%20me%20interesan%20sus%20servicios%20de%20seguridad"
                 target="_blank" rel="noopener noreferrer" class="whatsapp-cta__btn">
                 <svg class="whatsapp-cta__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path
@@ -687,7 +679,7 @@
                     <div class="footer__section">
                         <h3 class="footer__title">Enlaces rápidos</h3>
                         <nav class="footer__nav">
-                            <a href="#inicio">Inicio</a>
+                            <a href="#hero">Inicio</a>
                             <a href="#sobre">Sobre Nosotros</a>
                             <a href="#servicios">Servicios</a>
                             <a href="#trabaja">Trabaja con Nosotros</a>
