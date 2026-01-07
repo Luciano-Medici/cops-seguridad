@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cops-seguridad.com.ar/sitemap.xml
