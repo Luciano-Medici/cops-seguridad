@@ -832,19 +832,20 @@ h6 {
 }
 
 .service-card__icon {
-  color: var(--color-aqua);
-  min-width: 36px;
-  background: linear-gradient(135deg, var(--color-aqua), #00ccff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-aqua);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .service-card__svg {
   width: 36px;
   height: 36px;
-  filter: drop-shadow(0 2px 4px rgba(0, 255, 255, 0.3));
-  color: blue;
+  color: var(--color-prussian);
 }
 
 .service-card__main-text {
@@ -1258,7 +1259,7 @@ h6 {
 .whatsapp-cta__feature-icon {
   width: 16px;
   height: 16px;
-  color: blue;
+  color: var(--color-prussian);
   /* CORREGIDO: antes era prussian, ahora aqua */
 }
 
