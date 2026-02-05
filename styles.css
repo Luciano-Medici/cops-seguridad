@@ -105,7 +105,7 @@ h6 {
 .header__nav-list {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   list-style: none;
   font-size: var(--text-base);
 }

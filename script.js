@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators: document.querySelectorAll('.hero__indicator'),
         currentSlide: 0,
         interval: null,
-        intervalTime: 3000,
+        intervalTime: 5000,
 
         init: function() {
             this.startAutoPlay();
