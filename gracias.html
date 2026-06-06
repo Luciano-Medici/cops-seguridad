@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>¡Consulta recibida! | COPS Seguridad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18107435910"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-18107435910');
+    </script>
+    <!-- Conversión de formulario -->
+    <script>
+        gtag('event', 'conversion', { 'send_to': 'AW-18107435910/iJCqCJLzrLEcEIaXprpD' });
+    </script>
+
+    <link rel="icon" href="/assets/img/logo-fav.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-prussian: #033653;
+            --color-black: #000000;
+            --color-aqua: #00FFFF;
+            --color-white: #ffffff;
+            --font-primary: 'Kanit', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            font-weight: 300;
+            background-color: var(--color-prussian);
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .header {
+            width: 100%;
+            background-color: var(--color-prussian);
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+        }
+
+        .header__logo-img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* MAIN */
+        .main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Fondo decorativo */
+        .main::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .main::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* CARD */
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 4px;
+            padding: 56px 48px;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Línea superior decorativa */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-aqua);
+        }
+
+        /* Ícono de check */
+        .card__icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 2px solid var(--color-aqua);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        .card__icon svg {
+            width: 36px;
+            height: 36px;
+            color: var(--color-aqua);
+        }
+
+        .card__pretitle {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-aqua);
+            margin-bottom: 12px;
+        }
+
+        .card__title {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            font-weight: 700;
+            color: var(--color-white);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .card__text {
+            font-size: 1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        /* Botón principal */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--color-aqua);
+            color: var(--color-prussian);
+            font-family: var(--font-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 14px 32px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.15s ease;
+        }
+
+        .btn:hover {
+            background-color: #00e5e5;
+            transform: translateY(-1px);
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* Contador regresivo */
+        .redirect-notice {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .redirect-notice span {
+            color: var(--color-aqua);
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .footer__text {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .card {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="/" aria-label="Volver al inicio">
+            <img src="./assets/img/logo-header.png" alt="Logo COPS Seguridad" class="header__logo-img">
+        </a>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main">
+        <div class="card">
+
+            <!-- Ícono check -->
+            <div class="card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" />
+                </svg>
+            </div>
+
+            <p class="card__pretitle">Consulta recibida</p>
+            <h1 class="card__title">¡Gracias por contactarnos!</h1>
+            <p class="card__text">
+                Recibimos tu consulta correctamente. Nuestro equipo se pondrá en contacto con vos a la brevedad para darte toda la información que necesitás.
+            </p>
+
+            <a href="/" class="btn">
+                Volver al inicio
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14" />
+                    <path d="M13 6l6 6-6 6" />
+                </svg>
+            </a>
+
+            <p class="redirect-notice">
+                Serás redirigido automáticamente en <span id="countdown">10</span> segundos
+            </p>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer__text">© <span id="current-year"></span> COPS Seguridad. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Año actual
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Cuenta regresiva y redirección automática
+        let seconds = 10;
+        const countdownEl = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+                window.location.href = '/';
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
