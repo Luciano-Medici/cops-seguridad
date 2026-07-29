@@ -15,6 +15,25 @@
         gtag('js', new Date());
         gtag('config', 'AW-18107435910');
     </script>
+    <!-- Enhanced Conversions: datos del usuario (email / teléfono) -->
+    <!-- Debe ejecutarse ANTES del evento de conversión para que Google lo tome en cuenta -->
+    <script>
+        (function () {
+            try {
+                var stored = sessionStorage.getItem('cops_ec_user_data');
+                if (stored) {
+                    var userData = JSON.parse(stored);
+                    if (userData.email || userData.phone_number) {
+                        gtag('set', 'user_data', userData);
+                    }
+                    sessionStorage.removeItem('cops_ec_user_data');
+                }
+            } catch (e) {
+                // Si falla la lectura, la conversión igual se registra (sin enhanced conversions)
+            }
+        })();
+    </script>
+
     <!-- Conversión de formulario -->
     <script>
         gtag('event', 'conversion', { 'send_to': 'AW-18107435910/iJCqCJLzrLEcEIaXprpD' });
